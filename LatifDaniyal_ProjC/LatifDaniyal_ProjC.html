@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Shaded Planets and Their Moons</title>
+  </head>
+
+  <body onload="main()" onresize="drawResize()">
+    <canvas id="webgl" width="600" height="300">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <p>
+        FROM LEFT TO RIGHT: DULL COPPER, PEARL, BLACK RUBBER | WASD Movement |
+        Left/right arrow keys to turn left and right respectively, 
+        up/down arrow keys to tilt up and down respectively.
+      <button type="button" onclick="VBO1On()">Gouraud Shading</button>
+      <button type="button" onclick="VBO2On()">Phong Shading</button>
+      <button type="button" onclick="turnOnBlinnPhong()">Blinn-Phong Lighting<< </button>
+      <button type="button" onclick="turnOnPhong()">Phong Lighting<< </button>
+      <button type="button" onclick="LightOnOff()">Light ON/OFF<< </button>
+      X:
+      <input id="x-slide" type="range" min="-100" max="100" step="1" value="0">
+      Y:
+      <input type="range" min="-100" max="100" value="1" step="1" id="y-slide">
+      Z:
+      <input type="range" min="-100" max="100" value="0" step="1" id="z-slide">
+      Ambient R:
+      <input id="ambr" type="range" min="0" max="1" step="0.1" value="1.0">
+      Ambient G:
+      <input id="ambg" type="range" min="0" max="1" step="0.1" value="1.0">
+      Ambient B:
+      <input id="ambb" type="range" min="0" max="1" step="0.1" value="1.0">
+      Diffuse R:
+      <input id="diffuser" type="range" min="0" max="1" step="0.1" value="1.0">
+      Diffuse G:
+      <input id="diffuseg" type="range" min="0" max="1" step="0.1" value="1.0">
+      Diffuse B:
+      <input id="diffuseb" type="range" min="0" max="1" step="0.1" value="1.0">
+      Specular R:
+      <input id="specr" type="range" min="0" max="1" step="0.1" value="1.0">
+      Specular G:
+      <input id="specg" type="range" min="0" max="1" step="0.1" value="1.0">
+      Specular B:
+      <input id="specb" type="range" min="0" max="1" step="0.1" value="1.0">
+
+    </p>
+    <script src="./lib/webgl-utils.js"></script>
+    <script src="./lib/webgl-debug.js"></script>
+    <script src="./lib/cuon-utils.js"></script>
+    <script src="./lib/cuon-matrix-quat03.js"></script>
+<!-- YOU SHOULD UPGRADE to Brandon Jones' far-faster, 
+      far more complete vector/matrix/quaternion library: (Google it!)  THE BUTTON     <button type="button" onclick="VBO0toggle()">VBO-0 hide/show</button>
+		<script src="../lib/glmatrix.js"></script>
+--> 
+		<script src="./lib/LatifDaniyal_ProjC.js"></script>
+    <script src="LatifDaniyal_ProjC.js"></script>
+  </body>
+</html>
